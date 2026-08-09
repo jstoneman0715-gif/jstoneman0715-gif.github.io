@@ -134,7 +134,7 @@ async function fetchMMANews() {
     console.log('🔄 Fetching MMA news...');
     
     const response = await fetch(
-      `https://newsapi.org/v2/everything?q=MMA&sortBy=publishedAt&language=en&pageSize=20&apiKey=${apiKey}`
+      `https://newsapi.org/v2/everything?q=${encodeURIComponent('"MMA" OR "UFC" OR "mixed martial arts"')}&sortBy=publishedAt&language=en&pageSize=20&apiKey=${apiKey}`
     );
 
     if (!response.ok) {

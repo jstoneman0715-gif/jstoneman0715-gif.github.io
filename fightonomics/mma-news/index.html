@@ -72,7 +72,7 @@
     <script>
       (async () => {
         try {
-          const response = await fetch('/fightonomics/agents/mma-news-updater/mma-news.json');
+          const response = await fetch('/agents/mma-news-updater/mma-news.json');
           if (!response.ok) throw new Error('Failed to load news');
           const data = await response.json();
           const grid = document.getElementById('news-grid');
