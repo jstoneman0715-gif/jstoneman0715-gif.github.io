@@ -1,0 +1,21 @@
+<svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="stripes" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="16" height="16" fill="#131316"/>
+      <rect width="8" height="16" fill="#17171b"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="225" fill="url(#stripes)"/>
+  <line x1="0" y1="50" x2="400" y2="50" stroke="#e0263e" stroke-width="3" opacity="0.2"/>
+  <line x1="0" y1="175" x2="400" y2="175" stroke="#d4a24e" stroke-width="3" opacity="0.18"/>
+
+  <ellipse cx="190" cy="128" rx="58" ry="13" fill="#d4a24e" opacity="0.55"/>
+  <line x1="150" y1="136" x2="138" y2="205" stroke="#d4a24e" stroke-width="6" opacity="0.5"/>
+  <line x1="190" y1="139" x2="191" y2="207" stroke="#d4a24e" stroke-width="6" opacity="0.5"/>
+  <line x1="230" y1="136" x2="242" y2="205" stroke="#d4a24e" stroke-width="6" opacity="0.5"/>
+
+  <path d="M148,122 Q190,88 236,120 L244,148 Q190,134 140,150 Z" fill="#e0263e" opacity="0.6"/>
+
+  <rect x="270" y="118" width="22" height="58" rx="6" fill="#d4a24e" opacity="0.45"/>
+  <rect x="276" y="105" width="10" height="15" rx="3" fill="#d4a24e" opacity="0.55"/>
+</svg>
