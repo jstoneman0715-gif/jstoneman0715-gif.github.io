@@ -1,0 +1,14 @@
+{
+  "lastUpdated": "2026-08-09T01:18:00Z",
+  "articles": [
+    {
+      "title": "MMA News System Initialized",
+      "description": "Your MMA news system is ready. Run the fetch script to load latest articles.",
+      "url": "https://newsapi.org",
+      "image": null,
+      "source": "MMA News System",
+      "publishedAt": "2026-08-09T01:18:00Z",
+      "author": "System"
+    }
+  ]
+}
