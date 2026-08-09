@@ -1,14 +1,185 @@
 {
-  "lastUpdated": "2026-08-09T01:18:00Z",
+  "lastUpdated": "2026-08-09T08:19:26.875Z",
   "articles": [
     {
-      "title": "MMA News System Initialized",
-      "description": "Your MMA news system is ready. Run the fetch script to load latest articles.",
-      "url": "https://newsapi.org",
+      "title": "UFC Vegas 120 Results: Gamrot vs. Salkilld",
+      "description": "Mateusz Gamrot, Quillan Salkilld clash in UFC Vegas 120 main event",
+      "url": "https://www.mmafighting.com/ufc/503707/ufc-vegas-120-results-gamrot-vs-salkilld",
+      "image": "/agents/mma-news-updater/images/ufc-vegas-120-results-gamrot-vs-salkilld-0.jpeg",
+      "source": "MMA Fighting",
+      "publishedAt": "2026-08-08T07:00:00Z",
+      "author": "Bryan Tucker"
+    },
+    {
+      "title": "Frustrated Trump turns on ANOTHER ally as 'weak' Homeland Security boss Markwayne Mullin is in angry president's crosshairs over four key 'mistakes'",
+      "description": "Mullin was confirmed in March after being named Trump's pick to replace ousted Department of Homeland Security Secretary Kristi Noem but may have already worn out his welcome.",
+      "url": "https://www.dailymail.com/news/article-16037857/Trump-turns-Markwayne-Mullin-Homeland-Security-weak.html",
+      "image": "/agents/mma-news-updater/images/frustrated-trump-turns-on-another-ally-as-weak-homeland-security-boss-markwayne-mullin-is-in-angry-president-s-crosshairs-over-four-key-mistakes-1.jpeg",
+      "source": "Dailymail.com",
+      "publishedAt": "2026-08-08T05:26:05Z",
+      "author": "Stephen M. Lepore"
+    },
+    {
+      "title": "PFL Charlotte recap show: Bryan Battle wins, Lewis McGrillen-Evans steals the show",
+      "description": "Sean Sheehan is back with another Professional Fighters League post-fight show after Charlotte, North Carolina, played host to a card headlined by a middleweight bout with contender implications.",
+      "url": "https://www.sherdog.com/videos/sherdogradio/PFL-Charlotte-recap-show-Bryan-Battle-wins-Lewis-McGrillenEvans-steals-the-show-23651",
+      "image": "/agents/mma-news-updater/images/pfl-charlotte-recap-show-bryan-battle-wins-lewis-mcgrillen-evans-steals-the-show-2.jpeg",
+      "source": "Sherdog.com",
+      "publishedAt": "2026-08-08T05:15:48Z",
+      "author": "ssheehan@sherdog.com (Sean Sheehan)"
+    },
+    {
+      "title": "PFL Charlotte Results: Battle Splits Rosta, Jake Paul Next?",
+      "description": "PFL Charlotte went down last night (Fri., Aug. 7, 2026) inside Bojangles Coliseum in Charlotte, North Carolina. In the main event of the evening, Bryan Battle defeated Dalton Rosta via split decision after a back-and-forth brawl. The win gave Battle his first…",
+      "url": "https://www.mmamania.com/professional-fighters-league-pfl/463095/pfl-charlotte-results-recap-and-highlights-battle-splits-rosta-offers-to-welcome-jake-paul-to-mma",
+      "image": "/agents/mma-news-updater/images/pfl-charlotte-results-battle-splits-rosta-jake-paul-next-3.jpeg",
+      "source": "MMA Mania",
+      "publishedAt": "2026-08-08T05:08:18Z",
+      "author": "Adam Guillen"
+    },
+    {
+      "title": "Conor McGregor, Donald Trump and the political arena of MMA",
+      "description": "For MMA, Maga’s sports arm, not even a court finding of liability for rape prevented McGregor from topping the bill. Might his ‘dud’ comeback change attitudes?",
+      "url": "https://www.irishtimes.com/life-style/people/2026/08/08/conor-mcgregor-donald-trump-and-the-political-arena-of-mma/",
+      "image": "/agents/mma-news-updater/images/conor-mcgregor-donald-trump-and-the-political-arena-of-mma-4.jpeg",
+      "source": "The Irish Times",
+      "publishedAt": "2026-08-08T05:00:00Z",
+      "author": "Arthur Beesley"
+    },
+    {
+      "title": "PFL Charlotte results: Brian Battle edges Dalton Rosta in hometown win",
+      "description": "TUF 29 winner Brian Battle got his hand raised at home in the main event of PFL Charlotte.",
+      "url": "https://mmajunkie.usatoday.com/story/sports/pfl/2026/08/08/pfl-charlotte-results-brian-battle-wins-hometown-split-decision-dalton-rosta/91223827007/",
+      "image": "/agents/mma-news-updater/images/pfl-charlotte-results-brian-battle-edges-dalton-rosta-in-hometown-win-5.jpeg",
+      "source": "USA Today",
+      "publishedAt": "2026-08-08T04:43:53Z",
+      "author": "Danny Segura, MMA Junkie"
+    },
+    {
+      "title": "Midnight Mania! Gordon Beats Up Hapless Troll In Viral Video",
+      "description": "Bringing you the weird and wild from the world of MMA each and every weeknight!",
+      "url": "https://www.mmamania.com/ufc-videos/463020/video-jared-gordon-pummels-goofy-internet-troll-not-trying-to-catch-a-lawsuit",
+      "image": "/agents/mma-news-updater/images/midnight-mania-gordon-beats-up-hapless-troll-in-viral-video-6.jpeg",
+      "source": "MMA Mania",
+      "publishedAt": "2026-08-08T03:59:00Z",
+      "author": "Andrew Richardson"
+    },
+    {
+      "title": "PFL Charlotte: Battle vs. Rosta live results, highlights - MMA Junkie",
+      "description": "PFL Charlotte: Battle vs. Rosta live results, highlightsMMA Junkie PFL Charlotte: Battle vs. Rosta Live Updates, Results and HighlightsBleacher Report PFL Charlotte results: Battle vs. RostaMMA Fighting PFL Charlotte weigh-ins: Bryan Battle, Dalton Rosta set …",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=184895890",
+      "image": "/agents/mma-news-updater/images/pfl-charlotte-battle-vs-rosta-live-results-highlights-mma-junkie-7.jpeg",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-08-08T03:12:06Z",
+      "author": "feedfeeder"
+    },
+    {
+      "title": "Tender, loving care? Not in the ring",
+      "description": "Saturday Boxing: Leanna Martinez vs. Amanda Lovato, Jorge Villarruel vs. Shaquan Wager, four other boutx Time: 6 p.m. (doors open at 5) Location: Embassy Suites Streaming: YouTube Leanna Martinez is a registered nurse. Amanda Lovato is planning to enter the n…",
+      "url": "https://www.abqjournal.com/sports/tender-loving-care-not-in-the-ring/3098843",
       "image": null,
-      "source": "MMA News System",
-      "publishedAt": "2026-08-09T01:18:00Z",
-      "author": "System"
+      "source": "Albuquerque Journal",
+      "publishedAt": "2026-08-08T03:06:00Z",
+      "author": "Rick Wright, Albuquerque Journal, N.M."
+    },
+    {
+      "title": "Ex-UFC Champion Tyron Woodley Reveals Dream Opponent in RAF",
+      "description": "Tyron Woodley revealed who his dream opponent would be in RAF. Woodley surprisingly named an Olympic gold medalist instead of a UFC star. The post Ex-UFC Champion Tyron Woodley Reveals Dream Opponent in RAF appeared first on HEAVY.",
+      "url": "https://heavy.com/sports/ufc/tyron-woodley-reveals-dream-opponent-raf/",
+      "image": "/agents/mma-news-updater/images/ex-ufc-champion-tyron-woodley-reveals-dream-opponent-in-raf-9.jpeg",
+      "source": "Heavy.com",
+      "publishedAt": "2026-08-08T03:01:32Z",
+      "author": "Giancarlo Aulino"
+    },
+    {
+      "title": "PFL Charlotte video: Denis Goltsov scores violent TKO in opening round",
+      "description": "Watch Denis Goltsov score a violent finish at PFL Charlotte.",
+      "url": "https://mmajunkie.usatoday.com/story/sports/pfl/2026/08/07/pfl-charlotte-video-denis-goltsov-scores-violent-tko/91223019007/",
+      "image": "/agents/mma-news-updater/images/pfl-charlotte-video-denis-goltsov-scores-violent-tko-in-opening-round-10.jpeg",
+      "source": "USA Today",
+      "publishedAt": "2026-08-08T02:15:09Z",
+      "author": "Danny Segura, MMA Junkie"
+    },
+    {
+      "title": "ONE SAMURAI 2 – Results And Highlights For Every Match",
+      "description": "We’re reporting to you live from Tokyo, Japan! Join us!",
+      "url": "https://www.onefc.com/news/one-samurai-2-results-and-highlights-for-every-match/",
+      "image": "/agents/mma-news-updater/images/one-samurai-2-results-and-highlights-for-every-match-11.jpeg",
+      "source": "Onefc.com",
+      "publishedAt": "2026-08-08T02:03:36Z",
+      "author": "Bear Frazer"
+    },
+    {
+      "title": "Ian Garry Keeping Empty Frame On Wall For UFC Belt",
+      "description": "Ian Machado Garry is as confident as he can be entering his matchup with pound-for-pound king and UFC welterweight champion, Islam Makhachev, next weekend at UFC 330, which is probably why the brash Irishman already has an empty frame hanging on his wall at h…",
+      "url": "https://www.mmamania.com/latest-news/462997/confidence-or-delusion-ian-garry-keeping-empty-frame-on-wall-for-welterweight-title-ufc-330",
+      "image": "/agents/mma-news-updater/images/ian-garry-keeping-empty-frame-on-wall-for-ufc-belt-12.jpeg",
+      "source": "MMA Mania",
+      "publishedAt": "2026-08-08T02:00:00Z",
+      "author": "Dan Hiergesell"
+    },
+    {
+      "title": "PFL Charlotte video: Cheyanne Bowers turns tables, taps Elora Dana in first",
+      "description": "Cheyanne Bowers flipped the script on Elora Dana and tapped her with a rear-naked choke after almost getting submitted herself.",
+      "url": "https://mmajunkie.usatoday.com/story/sports/pfl/2026/08/07/pfl-charlotte-video-cheyanne-bowers-submits-elora-dana-first-round/91222666007/",
+      "image": "/agents/mma-news-updater/images/pfl-charlotte-video-cheyanne-bowers-turns-tables-taps-elora-dana-in-first-13.jpeg",
+      "source": "USA Today",
+      "publishedAt": "2026-08-08T01:20:22Z",
+      "author": "Danny Segura, MMA Junkie"
+    },
+    {
+      "title": "PFL Charlotte results: Battle vs. Rosta - MMA Fighting",
+      "description": "PFL Charlotte results: Battle vs. RostaMMA Fighting PFL Charlotte ‘Battle vs. Rosta’ play-by-play, results & round scoringsherdog.com Who's picking Dalton Rosta to spoil Bryan Battle's PFL Charlotte homecoming?MMA Junkie PFL Charlotte: Battle vs. Rosta Live U…",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=184895166",
+      "image": "/agents/mma-news-updater/images/pfl-charlotte-results-battle-vs-rosta-mma-fighting-14.jpeg",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-08-08T00:52:54Z",
+      "author": "feedfeeder"
+    },
+    {
+      "title": "Stop Overlooking This Vitamin When It Comes To Muscle Health",
+      "description": "Low levels of this nutrient could affect far more than bone health.",
+      "url": "https://www.mindbodygreen.com/articles/why-this-vitamin-is-important-for-muscle-health-and-strength-this-vitamin-when-it-comes",
+      "image": "/agents/mma-news-updater/images/stop-overlooking-this-vitamin-when-it-comes-to-muscle-health-15.jpeg",
+      "source": "mindbodygreen.com",
+      "publishedAt": "2026-08-08T00:08:00Z",
+      "author": "https://www.mindbodygreen.com/wc/zhan-slambee"
+    },
+    {
+      "title": "Matches to make after PFL Charlotte",
+      "description": "Professional Fighters League reshaped the promotion’s middleweight hierarchy and opened the door to several compelling matchups across multiple divisions at PFL Charlotte.",
+      "url": "https://www.sherdog.com/news/articles/Matches-to-make-after-PFL-Charlotte-202265",
+      "image": "/agents/mma-news-updater/images/matches-to-make-after-pfl-charlotte-16.jpeg",
+      "source": "Sherdog.com",
+      "publishedAt": "2026-08-07T23:58:12Z",
+      "author": "Mike.Pendleton23@gmail.com (Mike Pendleton)"
+    },
+    {
+      "title": "UFC 331: Arman Tsarukyan vs. Mauricio Ruffy odds, what to know",
+      "description": "Arman Tsarukyan will take on a surprise opponent at UFC 331.",
+      "url": "https://mmajunkie.usatoday.com/story/sports/ufc/2026/08/07/ufc-331-arman-tsarukyan-vs-mauricio-ruffy-betting-odds-mma-sports-gambling-prediction-pick/91210431007/",
+      "image": "/agents/mma-news-updater/images/ufc-331-arman-tsarukyan-vs-mauricio-ruffy-odds-what-to-know-17.jpeg",
+      "source": "USA Today",
+      "publishedAt": "2026-08-07T23:40:29Z",
+      "author": "Farah Hannoun, MMA Junkie"
+    },
+    {
+      "title": "PFL Charlotte video: Maxwell Djantou Nana folds foe with body shot",
+      "description": "Holy body shot! Watch Maxwell Djantou Nana fold his opponennt at PFL Charlotte.",
+      "url": "https://mmajunkie.usatoday.com/story/sports/pfl/2026/08/07/pfl-charlotte-video-maxwell-djantou-nana-tko-eduardo-neves-body-shot/91221800007/",
+      "image": "/agents/mma-news-updater/images/pfl-charlotte-video-maxwell-djantou-nana-folds-foe-with-body-shot-18.jpeg",
+      "source": "USA Today",
+      "publishedAt": "2026-08-07T23:30:05Z",
+      "author": "Danny Segura, MMA Junkie"
+    },
+    {
+      "title": "PFL Charlotte video: UFC vet Trey Waters stops Trukon Carson in wild car crash",
+      "description": "Watch UFC vet Trey Waters pick up a wild TKO win at PFL Charlotte.",
+      "url": "https://mmajunkie.usatoday.com/story/sports/pfl/2026/08/07/pfl-charlotte-trey-waters-tko-trukon-carson-first-round-car-crash/91221621007/",
+      "image": "/agents/mma-news-updater/images/pfl-charlotte-video-ufc-vet-trey-waters-stops-trukon-carson-in-wild-car-crash-19.jpeg",
+      "source": "USA Today",
+      "publishedAt": "2026-08-07T23:04:59Z",
+      "author": "Danny Segura, MMA Junkie"
     }
   ]
 }
