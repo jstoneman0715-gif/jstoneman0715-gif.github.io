@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fightonomics</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+        color: #fff;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+      .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+      header { text-align: center; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 2px solid #ff6b35; animation: slideDown 0.6s ease; }
+      header h1 { font-size: clamp(2rem, 8vw, 3.5rem); font-weight: 900; letter-spacing: 3px; color: #ff6b35; text-transform: uppercase; margin-bottom: 0.5rem; }
+      .tagline { font-size: clamp(0.95rem, 2vw, 1.2rem); color: #aaa; letter-spacing: 2px; text-transform: uppercase; }
+      .bio-section { background: rgba(255, 107, 53, 0.05); border: 1px solid #ff6b35; border-radius: 12px; padding: 2rem; margin-bottom: 3rem; backdrop-filter: blur(10px); }
+      .bio-title { font-size: clamp(1.3rem, 3vw, 1.7rem); font-weight: 700; color: #ff6b35; margin-bottom: 1rem; }
+      .bio-text p { font-size: clamp(0.95rem, 2vw, 1.05rem); color: #ddd; line-height: 1.8; }
+      .bio-text strong { color: #ff6b35; font-weight: 700; }
+      .pillar-nav { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+      .pillar-link { display: inline-block; padding: 1.25rem 1.5rem; background: linear-gradient(135deg, #ff6b35 0%, #ff8555 100%); color: #000; text-decoration: none; font-weight: 700; border-radius: 8px; text-align: center; font-size: clamp(0.95rem, 2vw, 1.05rem); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2); }
+      .pillar-link:hover { transform: translateY(-4px); box-shadow: 0 15px 40px rgba(255, 107, 53, 0.4); }
+      .news-header { text-align: center; margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid #333; }
+      .news-header h2 { font-size: clamp(1.3rem, 3vw, 1.7rem); color: #ff6b35; margin-bottom: 0.5rem; font-weight: 700; }
+      .news-header p { color: #aaa; font-size: clamp(0.9rem, 2vw, 1rem); }
+      .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+      .news-card { background: rgba(255, 107, 53, 0.02); border: 1px solid rgba(255, 107, 53, 0.1); border-radius: 12px; overflow: hidden; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; height: 100%; }
+      .news-card:hover { border-color: #ff6b35; box-shadow: 0 20px 40px rgba(255, 107, 53, 0.15); transform: translateY(-4px); }
+      .news-source { font-size: 0.75em; color: #ff6b35; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.75rem; font-weight: 700; padding: 1.5rem 1.5rem 0 1.5rem; }
+      .news-title { font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 700; color: #fff; margin-bottom: 1rem; line-height: 1.4; padding: 0 1.5rem; }
+      .news-description { font-size: 0.95em; color: #bbb; padding: 0 1.5rem; flex-grow: 1; margin-bottom: 1rem; line-height: 1.6; }
+      .news-footer { display: flex; justify-content: space-between; align-items: center; padding: 0 1.5rem 1.5rem 1.5rem; }
+      .news-date { font-size: 0.85em; color: #888; }
+      .read-more { display: flex; align-items: center; gap: 0.5rem; color: #ff6b35; text-decoration: none; font-weight: 700; font-size: 0.9em; transition: all 0.3s ease; }
+      .read-more:hover { color: #ff8555; gap: 0.75rem; }
+      .empty-state { text-align: center; padding: 4rem 2rem; color: #888; }
+      .empty-state h2 { color: #ff6b35; margin-bottom: 1rem; font-size: clamp(1.2rem, 3vw, 1.6rem); }
+      @keyframes slideDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+      @media (max-width: 1024px) { .pillar-nav { gap: 0.75rem; } }
+      @media (max-width: 768px) { .container { padding: 1rem; } header h1 { letter-spacing: 2px; } .pillar-nav { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.75rem; } .news-grid { grid-template-columns: 1fr; gap: 1.5rem; } .news-footer { flex-direction: column; align-items: flex-start; } }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Fightonomics</h1>
+        <div class="tagline">MMA News, Analysis & Commentary</div>
+      </header>
+      <div class="bio-section">
+        <div class="bio-title">Welcome to Fightonomics</div>
+        <div class="bio-text">
+          <p>Hi, I'm <strong>Julian Stoneman</strong>, an amateur wrestling and boxing champion with a lifelong passion for mixed martial arts. Fightonomics is my project to deliver data-driven analysis, career insights, and breaking MMA news. Whether you're interested in fighter statistics, career trajectories, or upcoming matchups, you'll find in-depth coverage here.</p>
+        </div>
+      </div>
+      <div class="pillar-nav">
+        <a href="/fightonomics/numbers-dont-lie/" class="pillar-link">Numbers Don't Lie</a>
+        <a href="/fightonomics/career-arcs/" class="pillar-link">Career Arcs</a>
+        <a href="/fightonomics/hot-news/" class="pillar-link">Hot News This Week</a>
+        <a href="/fightonomics/projected-matchups/" class="pillar-link">Projected Matchups</a>
+        <a href="/fightonomics/upcoming-events/" class="pillar-link">Upcoming Events</a>
+      </div>
+      <div class="news-header">
+        <h2>Latest News</h2>
+        <p>Breaking MMA news and event coverage</p>
+      </div>
+      <div class="news-grid" id="news-grid"></div>
+    </div>
+    <script>
+      (async () => {
+        try {
+          const response = await fetch('/fightonomics/agents/mma-news-updater/mma-news.json');
+          if (!response.ok) throw new Error('Failed to load news');
+          const data = await response.json();
+          const grid = document.getElementById('news-grid');
+          if (!data.articles || data.articles.length === 0) {
+            grid.innerHTML = '<div class="empty-state"><h2>No articles available</h2><p>Check back soon for the latest MMA news</p></div>';
+            return;
+          }
+          data.articles.forEach(article => {
+            const card = document.createElement('div');
+            card.className = 'news-card';
+            const dateStr = article.publishedAt ? new Date(article.publishedAt).toLocaleDateString() : new Date().toLocaleDateString();
+            card.innerHTML = `
+              <div class="news-source">${article.source || 'MMA News'}</div>
+              <div class="news-title">${article.title}</div>
+              <div class="news-description">${article.description || ''}</div>
+              <div class="news-footer">
+                <div class="news-date">${dateStr}</div>
+                <a href="${article.url}" target="_blank" rel="noopener noreferrer" class="read-more">Read More →</a>
+              </div>
+            `;
+            grid.appendChild(card);
+          });
+        } catch (error) {
+          console.error('Error loading news:', error);
+          document.getElementById('news-grid').innerHTML = '<div class="empty-state"><h2>Unable to Load News</h2><p>Please try again later</p></div>';
+        }
+      })();
+    </script>
+  </body>
+</html>
