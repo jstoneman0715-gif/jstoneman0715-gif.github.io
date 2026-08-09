@@ -1,0 +1,23 @@
+<svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="stripes" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="16" height="16" fill="#131316"/>
+      <rect width="8" height="16" fill="#17171b"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="225" fill="url(#stripes)"/>
+  <path d="M40,180 C110,180 140,60 200,55 C260,50 330,95 370,120" fill="none" stroke="#d4a24e" stroke-width="4" opacity="0.7"/>
+  <circle cx="40" cy="180" r="6" fill="#d4a24e" opacity="0.8"/>
+  <circle cx="200" cy="55" r="8" fill="#e0263e"/>
+  <circle cx="370" cy="120" r="6" fill="#d4a24e" opacity="0.8"/>
+  <g fill="#e0263e" opacity="0.9" transform="translate(168,72) scale(0.5)">
+    <circle cx="70" cy="22" r="13"/>
+    <polygon points="55,34 85,34 92,78 78,95 52,95 42,78"/>
+    <polygon points="52,95 44,95 18,150 32,156 58,102"/>
+    <polygon points="78,95 88,95 102,140 116,158 98,160 82,108"/>
+    <polygon points="58,40 46,36 34,54 44,64 58,50"/>
+    <circle cx="38" cy="59" r="8"/>
+    <polygon points="82,38 100,30 122,16 128,26 104,44 88,50"/>
+    <circle cx="124" cy="21" r="9"/>
+  </g>
+</svg>
