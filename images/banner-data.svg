@@ -1,0 +1,37 @@
+<svg viewBox="0 0 1050 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="stripes" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="16" height="16" fill="#131316"/>
+      <rect width="8" height="16" fill="#17171b"/>
+    </pattern>
+  </defs>
+  <rect width="1050" height="300" fill="url(#stripes)"/>
+
+  <!-- bar chart -->
+  <g opacity="0.85">
+    <rect x="120" y="200" width="46" height="60" fill="#d4a24e"/>
+    <rect x="180" y="160" width="46" height="100" fill="#e0263e"/>
+    <rect x="240" y="180" width="46" height="80" fill="#d4a24e"/>
+    <rect x="300" y="110" width="46" height="150" fill="#e0263e"/>
+    <rect x="360" y="140" width="46" height="120" fill="#d4a24e"/>
+    <rect x="420" y="70" width="46" height="190" fill="#e0263e"/>
+  </g>
+  <line x1="110" y1="262" x2="480" y2="262" stroke="#a7a7ae" stroke-width="2" opacity="0.4"/>
+
+  <!-- trend line overlay -->
+  <path d="M120,230 L226,180 L286,210 L346,140 L406,170 L466,90" fill="none" stroke="#f3f3f2" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- fighter silhouette -->
+  <g fill="#d4a24e" opacity="0.9" transform="translate(700,22) scale(1.6)">
+    <circle cx="70" cy="22" r="13"/>
+    <polygon points="55,34 85,34 92,78 78,95 52,95 42,78"/>
+    <polygon points="52,95 44,95 18,150 32,156 58,102"/>
+    <polygon points="78,95 88,95 102,140 116,158 98,160 82,108"/>
+    <polygon points="58,40 46,36 34,54 44,64 58,50"/>
+    <circle cx="38" cy="59" r="8"/>
+    <polygon points="82,38 100,30 122,16 128,26 104,44 88,50"/>
+    <circle cx="124" cy="21" r="9"/>
+  </g>
+
+  <rect x="0" y="292" width="1050" height="8" fill="#e0263e" opacity="0.5"/>
+</svg>
