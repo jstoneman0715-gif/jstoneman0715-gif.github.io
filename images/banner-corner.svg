@@ -1,0 +1,42 @@
+<svg viewBox="0 0 1050 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="stripes" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="16" height="16" fill="#131316"/>
+      <rect width="8" height="16" fill="#17171b"/>
+    </pattern>
+  </defs>
+  <rect width="1050" height="300" fill="url(#stripes)"/>
+
+  <!-- ring corner post + ropes -->
+  <rect x="20" y="0" width="16" height="300" fill="#d4a24e" opacity="0.3"/>
+  <line x1="36" y1="60" x2="1050" y2="60" stroke="#e0263e" stroke-width="4" opacity="0.2"/>
+  <line x1="36" y1="150" x2="1050" y2="150" stroke="#d4a24e" stroke-width="4" opacity="0.18"/>
+  <line x1="36" y1="240" x2="1050" y2="240" stroke="#e0263e" stroke-width="4" opacity="0.2"/>
+
+  <!-- corner stool -->
+  <ellipse cx="260" cy="168" rx="70" ry="16" fill="#d4a24e" opacity="0.55"/>
+  <line x1="210" y1="178" x2="195" y2="278" stroke="#d4a24e" stroke-width="7" opacity="0.5"/>
+  <line x1="260" y1="182" x2="262" y2="280" stroke="#d4a24e" stroke-width="7" opacity="0.5"/>
+  <line x1="310" y1="178" x2="325" y2="278" stroke="#d4a24e" stroke-width="7" opacity="0.5"/>
+
+  <!-- towel draped over the stool -->
+  <path d="M205,160 Q260,116 322,156 L332,190 Q260,172 198,192 Z" fill="#e0263e" opacity="0.6"/>
+
+  <!-- water bottle -->
+  <rect x="420" y="150" width="28" height="72" rx="7" fill="#d4a24e" opacity="0.45"/>
+  <rect x="428" y="134" width="12" height="18" rx="3" fill="#d4a24e" opacity="0.55"/>
+
+  <!-- cornerman silhouette -->
+  <g fill="#e0263e" opacity="0.85" transform="translate(760,35) scale(1.4)">
+    <circle cx="70" cy="22" r="13"/>
+    <polygon points="55,34 85,34 92,78 78,95 52,95 42,78"/>
+    <polygon points="52,95 44,95 18,150 32,156 58,102"/>
+    <polygon points="78,95 88,95 102,140 116,158 98,160 82,108"/>
+    <polygon points="58,40 46,36 34,54 44,64 58,50"/>
+    <circle cx="38" cy="59" r="8"/>
+    <polygon points="82,38 100,30 122,16 128,26 104,44 88,50"/>
+    <circle cx="124" cy="21" r="9"/>
+  </g>
+
+  <rect x="0" y="292" width="1050" height="8" fill="#e0263e" opacity="0.5"/>
+</svg>
