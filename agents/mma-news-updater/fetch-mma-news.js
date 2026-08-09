@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const dataFile = path.join(__dirname, '../src/data/mma-news.json');
+const dataFile = path.join(__dirname, 'mma-news.json');
 
 // Extract fighter names and keywords from text
 function extractFighterKeywords(text) {
