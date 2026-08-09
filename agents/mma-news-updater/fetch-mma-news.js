@@ -100,6 +100,28 @@ async function fetchFighterImage(searchQuery) {
   return null;
 }
 
+// Helper to download an image to a local file and return the repo-relative path
+async function downloadImageToRepo(url, slugBase) {
+  if (!url) return null;
+  try {
+    const res = await fetch(url);
+    if (!res.ok) return null;
+    const contentType = res.headers.get('content-type') || '';
+    const ext = contentType.split('/').pop().split(';')[0] || 'jpg';
+    const safeExt = ext.split('?')[0];
+    const fileName = `${slugBase}.${safeExt}`;
+    const imagesDir = path.join(__dirname, 'images');
+    if (!fs.existsSync(imagesDir)) fs.mkdirSync(imagesDir, { recursive: true });
+    const outPath = path.join(imagesDir, fileName);
+    const arrayBuffer = await res.arrayBuffer();
+    fs.writeFileSync(outPath, Buffer.from(arrayBuffer));
+    // Return repo-relative web path
+    return `/agents/mma-news-updater/images/${fileName}`;
+  } catch (e) {
+    return null;
+  }
+}
+
 async function fetchMMANews() {
   const apiKey = process.env.NEWS_API_KEY;
 
@@ -128,20 +150,31 @@ async function fetchMMANews() {
     console.log('🔍 Processing articles and finding fighter images...');
     
     const articles = await Promise.all(
-      data.articles.map(async (article) => {
+      data.articles.map(async (article, idx) => {
         let image = article.urlToImage;
-        
+
         // Try to find a better fighter image if original is missing
         if (!image) {
-          console.log(`  🔎 Searching for image: "${article.title.substring(0, 50)}..."`);
-          image = await fetchFighterImage(article.title);
+          console.log(`  🔎 Searching for image: "${article.title ? article.title.substring(0, 50) : 'untitled'}..."`);
+          image = await fetchFighterImage(article.title || article.description || 'MMA fighter');
         }
-        
+
+        // If we have an image URL, try to download it into the repo and return a local path
+        let localImagePath = null;
+        if (image) {
+          // create a slug base from title + index
+          const slugBase = (article.title || 'fighter').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') + `-${idx}`;
+          localImagePath = await downloadImageToRepo(image, slugBase);
+          if (!localImagePath) {
+            console.log(`  ⚠️ Failed to download image for: ${article.title}`);
+          }
+        }
+
         return {
           title: article.title,
           description: article.description,
           url: article.url,
-          image: image,
+          image: localImagePath || image || null,
           source: article.source.name,
           publishedAt: article.publishedAt,
           author: article.author,
