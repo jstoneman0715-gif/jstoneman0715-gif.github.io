@@ -26,54 +26,77 @@ function extractFighterKeywords(text) {
   return [...new Set(keywords)];
 }
 
-// Search for fighter images across multiple free APIs
+// Search for fighter images using Wikimedia (preferred) and fall back to other sources
 async function fetchFighterImage(searchQuery) {
   const queries = [searchQuery, ...extractFighterKeywords(searchQuery)];
-  
+
+  // Try Wikimedia Commons / Wikipedia first (no API key required)
+  async function fetchWikimedia(query) {
+    try {
+      // Search for a relevant Wikipedia page
+      const sres = await fetch(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(query)}&srlimit=1&format=json&origin=*`).then(r => r.ok ? r.json() : null);
+      const page = sres?.query?.search?.[0];
+      if (!page) return null;
+      const pageId = page.pageid;
+
+      // Request page image (original or thumbnail)
+      const pres = await fetch(`https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&piprop=original|thumbnail&pageids=${pageId}&pithumbsize=800&format=json&origin=*`).then(r => r.ok ? r.json() : null);
+      const pageObj = pres?.query?.pages?.[pageId];
+      if (pageObj?.original?.source) return pageObj.original.source;
+      if (pageObj?.thumbnail?.source) return pageObj.thumbnail.source;
+    } catch (e) {
+      // ignore
+    }
+    return null;
+  }
+
   for (const query of queries) {
-    try {
-      // Try Unsplash (free, no auth required)
-      const unsplashRes = await fetch(
-        `https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=1&client_id=cJv9DBiCqRZBj6t9vGtcnG9Yj2h7vAP2iXjfW2RzWH0`
-      ).then(r => r.ok ? r.json() : null);
-      
-      if (unsplashRes?.results?.[0]?.urls?.regular) {
-        console.log(`  📸 Found Unsplash image for: ${query}`);
-        return unsplashRes.results[0].urls.regular;
-      }
-    } catch (e) {
-      // Continue to next source
+    // Wikimedia
+    const wm = await fetchWikimedia(query);
+    if (wm) {
+      console.log(`  📸 Found Wikimedia image for: ${query}`);
+      return wm;
     }
-    
-    try {
-      // Try Pexels (free, no auth required)
-      const pexelsRes = await fetch(
-        `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=1&client_id=563492ad6f91700001000001`
-      ).then(r => r.ok ? r.json() : null);
-      
-      if (pexelsRes?.photos?.[0]?.src?.large) {
-        console.log(`  📸 Found Pexels image for: ${query}`);
-        return pexelsRes.photos[0].src.large;
-      }
-    } catch (e) {
-      // Continue to next source
+
+    // Try Unsplash if key present
+    const unsplashKey = process.env.UNSPLASH_KEY;
+    if (unsplashKey) {
+      try {
+        const unsplashRes = await fetch(
+          `https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=1&client_id=${unsplashKey}`
+        ).then(r => r.ok ? r.json() : null);
+        if (unsplashRes?.results?.[0]?.urls?.regular) {
+          console.log(`  📸 Found Unsplash image for: ${query}`);
+          return unsplashRes.results[0].urls.regular;
+        }
+      } catch (e) {}
     }
-    
-    try {
-      // Try Pixabay (free, no auth required)
-      const pixabayRes = await fetch(
-        `https://pixabay.com/api/?q=${encodeURIComponent(query)}&image_type=photo&per_page=1&key=43292100-68a1cc19f7c3b4d8a1ff3e000`
-      ).then(r => r.ok ? r.json() : null);
-      
-      if (pixabayRes?.hits?.[0]?.largeImageURL) {
-        console.log(`  📸 Found Pixabay image for: ${query}`);
-        return pixabayRes.hits[0].largeImageURL;
-      }
-    } catch (e) {
-      // Continue to next source
+
+    // Try Pexels if key present
+    const pexelsKey = process.env.PEXELS_KEY;
+    if (pexelsKey) {
+      try {
+        const pexelsRes = await fetch(`https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=1`, { headers: { Authorization: pexelsKey } }).then(r => r.ok ? r.json() : null);
+        if (pexelsRes?.photos?.[0]?.src?.large) {
+          console.log(`  📸 Found Pexels image for: ${query}`);
+          return pexelsRes.photos[0].src.large;
+        }
+      } catch (e) {}
+    }
+
+    // Try Pixabay if key present
+    const pixabayKey = process.env.PIXABAY_KEY;
+    if (pixabayKey) {
+      try {
+        const pixabayRes = await fetch(`https://pixabay.com/api/?q=${encodeURIComponent(query)}&image_type=photo&per_page=1&key=${pixabayKey}`).then(r => r.ok ? r.json() : null);
+        if (pixabayRes?.hits?.[0]?.largeImageURL) {
+          console.log(`  📸 Found Pixabay image for: ${query}`);
+          return pixabayRes.hits[0].largeImageURL;
+        }
+      } catch (e) {}
     }
   }
-  
+
   return null;
 }
 
