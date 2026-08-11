@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fightonomics</title>
+    <title>Fightonomics — MMA News, Analysis & Commentary</title>
+  <link rel="icon" type="image/svg+xml" href="/images/avatar-glove.svg">
+  <meta name="description" content="Data-driven MMA analysis and breaking news from Fightonomics — fighter statistics, career trajectories, and upcoming matchups.">
+  <link rel="canonical" href="https://jstoneman0715-gif.github.io/fightonomics/mma-news/">
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body {
@@ -29,6 +32,7 @@
       .news-header p { color: #aaa; font-size: clamp(0.9rem, 2vw, 1rem); }
       .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
       .news-card { background: rgba(255, 107, 53, 0.02); border: 1px solid rgba(255, 107, 53, 0.1); border-radius: 12px; overflow: hidden; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; height: 100%; }
+      .news-image { width: 100%; height: 190px; object-fit: cover; display: block; background: rgba(255, 107, 53, 0.05); }
       .news-card:hover { border-color: #ff6b35; box-shadow: 0 20px 40px rgba(255, 107, 53, 0.15); transform: translateY(-4px); }
       .news-source { font-size: 0.75em; color: #ff6b35; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.75rem; font-weight: 700; padding: 1.5rem 1.5rem 0 1.5rem; }
       .news-title { font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 700; color: #fff; margin-bottom: 1rem; line-height: 1.4; padding: 0 1.5rem; }
@@ -57,11 +61,11 @@
         </div>
       </div>
       <div class="pillar-nav">
-        <a href="/fightonomics/numbers-dont-lie/" class="pillar-link">Numbers Don't Lie</a>
-        <a href="/fightonomics/career-arcs/" class="pillar-link">Career Arcs</a>
-        <a href="/fightonomics/hot-news/" class="pillar-link">Hot News This Week</a>
-        <a href="/fightonomics/projected-matchups/" class="pillar-link">Projected Matchups</a>
-        <a href="/fightonomics/upcoming-events/" class="pillar-link">Upcoming Events</a>
+        <a href="/fact-breakdowns.html" class="pillar-link">Fact Breakdowns</a>
+        <a href="/numbers-dont-lie.html" class="pillar-link">Numbers Don't Lie</a>
+        <a href="/career-arcs.html" class="pillar-link">Career Arcs</a>
+        <a href="/corner-notes.html" class="pillar-link">Corner Notes</a>
+        <a href="/matchup-models.html" class="pillar-link">Matchup Models</a>
       </div>
       <div class="news-header">
         <h2>Latest News</h2>
@@ -84,7 +88,11 @@
             const card = document.createElement('div');
             card.className = 'news-card';
             const dateStr = article.publishedAt ? new Date(article.publishedAt).toLocaleDateString() : new Date().toLocaleDateString();
+            const imageHtml = article.image
+              ? `<img class="news-image" src="${article.image}" alt="${(article.title || '').replace(/"/g, '&quot;')}" loading="lazy" onerror="this.remove()">`
+              : '';
             card.innerHTML = `
+              ${imageHtml}
               <div class="news-source">${article.source || 'MMA News'}</div>
               <div class="news-title">${article.title}</div>
               <div class="news-description">${article.description || ''}</div>
