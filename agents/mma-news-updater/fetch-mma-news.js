@@ -206,6 +206,25 @@ async function fetchMMANews() {
     console.log(`📸 ${withImages}/${articles.length} articles have images`);
     console.log(`📁 Saved to: ${dataFile}`);
     console.log(`⏰ Last updated: ${new Date().toISOString()}`);
+
+    // Remove images left over from previous runs that no longer belong to any current article
+    const imagesDir = path.join(__dirname, 'images');
+    if (fs.existsSync(imagesDir)) {
+      const referenced = new Set(
+        articles
+          .map(a => a.image)
+          .filter(img => img && img.startsWith('/agents/mma-news-updater/images/'))
+          .map(img => path.basename(img))
+      );
+      let removed = 0;
+      for (const file of fs.readdirSync(imagesDir)) {
+        if (!referenced.has(file)) {
+          fs.unlinkSync(path.join(imagesDir, file));
+          removed++;
+        }
+      }
+      if (removed > 0) console.log(`🧹 Removed ${removed} orphaned image(s) from previous runs`);
+    }
   } catch (error) {
     console.error('❌ Error fetching MMA news:', error.message);
     process.exit(1);
